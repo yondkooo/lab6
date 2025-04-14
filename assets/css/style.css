@@ -357,6 +357,70 @@ h6,
     height: auto !important;
   }
 }
+/* === Үндсэн хэмжээ === */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+  width: 150px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* === Tablet хувилбар (768px-аас доош) === */
+@media (max-width: 768px) {
+  .navbar-brand {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .navbar-brand img {
+    width: 110px;
+  }
+}
+
+/* === Гар утас (480px-аас доош) === */
+@media (max-width: 480px) {
+  .navbar-brand {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-brand img {
+    width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    overflow-x: hidden; /* navbar-аас хэтрэхийг зогсооно */
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap; /* хэтэрвэл дараагийн мөрт шилжинэ */
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.25rem;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    flex: 0 1 auto;
+    word-break: break-word;
+    white-space: normal; /* урт үг хугарч мөр дагана */
+  }
+
+  .container {
+    max-width: 100vw; /* body-гаас хэтрэхээс хамгаална */
+    overflow-x: hidden;
+  }
+}
+
 .row {
   --gutter-x: 1.5rem;
   --gutter-y: 0;
